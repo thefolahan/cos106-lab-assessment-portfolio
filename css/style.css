@@ -2835,6 +2835,85 @@ main > .section.screen:not(:first-child):not(.contact-screen) {
   }
 }
 
+@media (min-width: 1024px) {
+  .planner-screen.section.screen {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .side-layout .planner-form {
+    gap: 0.875rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .side-layout .planner-toolbar {
+    margin-top: 1.25rem;
+  }
+
+  .side-layout .progress-meta {
+    margin-top: 1rem;
+  }
+
+  .side-layout .task-list {
+    gap: 0.625rem;
+    margin-top: 1rem;
+  }
+
+  .side-layout .task {
+    padding: 0.8rem 1.1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-height: 800px) {
+  .side-layout .planner-form .field label {
+    font-size: 10px;
+  }
+
+  .side-layout .field input:not([type="checkbox"]),
+  .side-layout .field select {
+    height: 2.75rem;
+  }
+
+  .side-layout .planner-form .pill {
+    margin-top: 1.35rem;
+    padding-block: 0.75rem;
+  }
+
+  .side-layout .task {
+    padding: 0.6rem 1rem;
+  }
+
+  .side-layout .task-title {
+    font-size: 1rem;
+  }
+
+  .planner-screen.section.screen {
+    padding-top: 5.75rem;
+  }
+
+  .side-layout .planner-toolbar {
+    margin-top: 1rem;
+  }
+
+  .side-layout .filter-btn {
+    padding: 0.35rem 0.9rem;
+  }
+
+  .side-layout .progress-meta {
+    margin-top: 0.75rem;
+  }
+
+  .side-layout .task-list {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 560px) {
+  .planner-screen .side-layout .planner {
+    max-height: calc(100svh - var(--footer-h, 9rem) - 7.5rem);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
