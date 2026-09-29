@@ -319,6 +319,19 @@ function setupBackToTop() {
   });
 }
 
+function setupFooterHeight() {
+  const footer = document.querySelector(".site-footer");
+  if (!footer) return;
+
+  function update() {
+    document.documentElement.style.setProperty("--footer-h", footer.offsetHeight + "px");
+  }
+
+  update();
+  window.addEventListener("resize", update);
+  if ("ResizeObserver" in window) new ResizeObserver(update).observe(footer);
+}
+
 function setYear() {
   document.querySelectorAll("[data-year]").forEach(function (element) {
     element.textContent = new Date().getFullYear();
@@ -327,6 +340,7 @@ function setYear() {
 
 document.addEventListener("DOMContentLoaded", function () {
   setupPills();
+  setupFooterHeight();
   setupHeader();
   setupMenu();
   setupMagnetic();
