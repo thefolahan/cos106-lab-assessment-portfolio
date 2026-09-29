@@ -13,7 +13,7 @@
   <script src="js/main.js" defer></script>
   <script src="js/planner.js" defer></script>
 </head>
-<body>
+<body class="page-fit">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -76,51 +76,52 @@
   <button class="back-to-top" type="button" aria-label="Back to the top"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></button>
 
   <main id="main">
-    <section class="section screen page-hero gutter">
-      <p class="type-eyebrow fade-up" style="--delay: 0.1s">Academic Planner</p>
-      <h1 class="type-h2 fade-up" style="--delay: 0.2s">Plan The <span class="text-accent">Semester</span>.</h1>
-      <p class="type-body text-soft fade-up" style="--delay: 0.35s">Add assignments and study tasks, tick them off as you finish them, and delete what you no longer need. Your tasks are saved in this browser, so they are still here when you come back.</p>
-    </section>
-
     <section class="section screen screen-last planner-screen gutter">
-      <div class="planner">
-        <form class="form-card planner-form reveal" id="task-form" novalidate>
-          <div class="field">
-            <label for="task-title">Task</label>
-            <input type="text" id="task-title" name="title" maxlength="120" placeholder="For example, revise HTML forms" aria-describedby="task-title-error">
-            <span class="field-error" id="task-title-error" aria-live="polite"></span>
-          </div>
-          <div class="field">
-            <label for="task-due">Due date</label>
-            <input type="date" id="task-due" name="due">
-          </div>
-          <div class="field">
-            <label for="task-priority">Priority</label>
-            <select id="task-priority" name="priority">
-              <option value="high">High</option>
-              <option value="medium" selected>Medium</option>
-              <option value="low">Low</option>
-            </select>
-          </div>
-          <button class="pill pill-solid" type="submit">Add task</button>
-        </form>
-
-        <div class="planner-toolbar">
-          <div class="filters" role="group" aria-label="Filter tasks">
-            <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
-            <button class="filter-btn" type="button" data-filter="active" aria-pressed="false">Active</button>
-            <button class="filter-btn" type="button" data-filter="completed" aria-pressed="false">Completed</button>
-          </div>
-          <button class="text-btn" type="button" id="clear-completed">Clear completed</button>
+      <div class="side-layout">
+        <div class="side-intro">
+          <p class="type-eyebrow fade-up" style="--delay: 0.1s">Academic Planner</p>
+          <h1 class="type-h2 fade-up" style="--delay: 0.2s">Plan The <span class="text-accent">Semester</span>.</h1>
+          <p class="type-body text-soft fade-up" style="--delay: 0.35s">Add assignments and study tasks, tick them off as you finish them, and delete what you no longer need. Your tasks are saved in this browser, so they are still here when you come back.</p>
         </div>
+        <div class="planner fade-up" style="--delay: 0.4s">
+          <form class="form-card planner-form" id="task-form" novalidate>
+            <div class="field planner-task">
+              <label for="task-title">Task</label>
+              <input type="text" id="task-title" name="title" maxlength="120" placeholder="For example, revise HTML forms" aria-describedby="task-title-error">
+              <span class="field-error" id="task-title-error" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="task-due">Due date</label>
+              <input type="date" id="task-due" name="due">
+            </div>
+            <div class="field">
+              <label for="task-priority">Priority</label>
+              <select id="task-priority" name="priority">
+                <option value="high">High</option>
+                <option value="medium" selected>Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+            <button class="pill pill-solid" type="submit">Add task</button>
+          </form>
 
-        <div class="progress-meta">
-          <p class="type-meta" id="task-summary" aria-live="polite"></p>
-          <p class="type-label" id="task-percent"></p>
+          <div class="planner-toolbar">
+            <div class="filters" role="group" aria-label="Filter tasks">
+              <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter-btn" type="button" data-filter="active" aria-pressed="false">Active</button>
+              <button class="filter-btn" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+            </div>
+            <button class="text-btn" type="button" id="clear-completed">Clear completed</button>
+          </div>
+
+          <div class="progress-meta">
+            <p class="type-meta" id="task-summary" aria-live="polite"></p>
+            <p class="type-label" id="task-percent"></p>
+          </div>
+          <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="task-progress"></div></div>
+
+          <ul class="task-list" id="task-list"></ul>
         </div>
-        <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="task-progress"></div></div>
-
-        <ul class="task-list" id="task-list"></ul>
       </div>
     </section>
   </main>

@@ -8,7 +8,7 @@ Joshua Omisakin, BSc Software Engineering, Miva Open University
 | Page | File | Contents |
 | --- | --- | --- |
 | Home | `index.html` | Name and photograph, welcome message, navigation menu and biography |
-| About Me | `about.html` | Educational background, career aspirations, hobbies and interests |
+| About Me | `about.html` | Educational background, hobbies and interests, career aspirations and technical skills |
 | Projects | `projects.html` | Three projects with descriptions, screenshots, links and a video walkthrough |
 | Academic Planner | `planner.html` | Add tasks, mark them as completed, delete them and filter the list |
 | Contact | `contact.html` | Name, email address, phone number and message, validated with JavaScript |
