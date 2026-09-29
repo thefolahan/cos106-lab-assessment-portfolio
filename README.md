@@ -8,8 +8,8 @@ Joshua Omisakin, BSc Software Engineering, Miva Open University
 | Page | File | Contents |
 | --- | --- | --- |
 | Home | `index.html` | Name and photograph, welcome message, navigation menu and biography |
-| About Me | `about.html` | Educational background, career aspirations, technical skills, hobbies and interests |
-| Projects | `projects.html` | Three projects with descriptions, screenshots and links, a video walkthrough, and live work |
+| About Me | `about.html` | Educational background, career aspirations, hobbies and interests |
+| Projects | `projects.html` | Three projects with descriptions, screenshots, links and a video walkthrough |
 | Academic Planner | `planner.html` | Add tasks, mark them as completed, delete them and filter the list |
 | Contact | `contact.html` | Name, email address, phone number and message, validated with JavaScript |
 
@@ -26,7 +26,6 @@ One external stylesheet in `css/style.css`, with a responsive layout built on Fl
 * `js/main.js`: navigation, mobile menu, button effects, scroll reveals, rotating headline, scroll progress pen and back to top button.
 * `js/planner.js`: the task manager, built on an array of task objects and saved to `localStorage`.
 * `js/contact.js`: contact form validation for empty fields, email format and digits only phone numbers.
-* `js/toolkit.js`: the moving technical skills field on the About page.
 
 ## Running locally
 
