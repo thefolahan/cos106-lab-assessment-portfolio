@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Joshua Omisakin, software engineering student at Miva Open University and full stack engineer.">
+  <meta name="theme-color" content="#1d2440">
+  <title>Joshua Omisakin: Student Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Outfit:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="gutter">
+      <div class="header-bar">
+        <a class="logo" href="index.html"><span class="sr-only">devfolahan</span><span aria-hidden="true"><span class="bracket">&lt;</span>devFolahan/<span class="bracket">&gt;</span></span></a>
+        <nav class="primary-nav" aria-label="Primary">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About Me</a>
+          <a href="projects.html">Projects</a>
+          <a href="planner.html">Planner</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="magnetic"><div class="magnetic-inner"><a class="pill pill-solid pill-sm" href="contact.html">Get in touch</a></div></div>
+          <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="burger-dots"><span></span><span></span><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu gutter" id="mobile-menu">
+    <div class="header-bar">
+      <span class="logo"><span class="sr-only">devfolahan</span><span aria-hidden="true"><span class="bracket">&lt;</span>devFolahan/<span class="bracket">&gt;</span></span></span>
+      <button class="menu-close" type="button" aria-label="Close menu"><span></span></button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile">
+      <a class="type-h3" href="index.html" aria-current="page"><span class="type-label">01</span>Home</a>
+      <a class="type-h3" href="about.html"><span class="type-label">02</span>About Me</a>
+      <a class="type-h3" href="projects.html"><span class="type-label">03</span>Projects</a>
+      <a class="type-h3" href="planner.html"><span class="type-label">04</span>Planner</a>
+      <a class="type-h3" href="contact.html"><span class="type-label">05</span>Contact</a>
+    </nav>
+    <a class="mobile-cta" href="contact.html">Get in touch</a>
+  </div>
+
+  <div class="pen" aria-hidden="true">
+    <svg class="pen-lines">
+      <line class="pen-rule" x1="50%" x2="50%" y1="0" y2="100%"/>
+      <line class="pen-ink" x1="50%" x2="50%" y1="0" y2="0" stroke-linecap="round"/>
+    </svg>
+    <div class="pen-body">
+      <svg viewBox="0 0 18 80">
+        <rect x="6.5" y="0" width="5" height="6.5" rx="1.5" fill="#f9fcf4"/>
+        <rect x="3" y="5" width="12" height="46" rx="4" fill="#ff9bb4"/>
+        <rect x="5" y="9" width="1.6" height="36" rx="0.8" fill="#fff" opacity="0.45"/>
+        <rect x="11.2" y="8" width="1.8" height="25" rx="0.9" fill="#1d2440" opacity="0.5"/>
+        <rect x="3" y="49" width="12" height="3" fill="#1d2440"/>
+        <path d="M3 52H15L12.5 66H5.5Z" fill="#f9fcf4"/>
+        <path d="M4.2 56H13.8M4.9 59.5H13.1M5.5 63H12.5" stroke="#1d2440" stroke-opacity="0.28" stroke-width="0.9"/>
+        <path d="M5.5 66H12.5L9.9 76.5H8.1Z" fill="#c8ccd8"/>
+        <path d="M9 66H12.5L9.9 76.5H9Z" fill="#9ea3b3"/>
+        <circle cx="9" cy="78" r="1.7" fill="#ff9bb4"/>
+      </svg>
+    </div>
+  </div>
+
+  <button class="back-to-top" type="button" aria-label="Back to the top"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></button>
+
+  <main id="main">
+    <section class="section hero">
+      <div class="gutter hero-grid">
+        <div>
+          <p class="type-eyebrow hero-greeting fade-up" style="--delay: 0.1s">Hello, I am Joshua Omisakin</p>
+          <h1 class="type-display hero-headline" data-headlines='[{"top": "Welcome to my", "accent": "student portfolio", "bottom": "and planner."}, {"top": "Software engineer", "accent": "studying the craft", "bottom": "behind it."}, {"top": "I turn ideas into", "accent": "products people", "bottom": "depend on."}]'>
+            <span class="sr-only">Welcome to my student portfolio and planner.</span>
+            <span aria-hidden="true">
+              <span class="headline-line"><span class="headline-text fade-up" style="--delay: 0.2s">Welcome to my</span></span>
+              <span class="headline-line"><span class="headline-text text-accent fade-up" style="--delay: 0.28s">student portfolio</span></span>
+              <span class="headline-line"><span class="headline-text fade-up" style="--delay: 0.36s">and planner.</span></span>
+            </span>
+          </h1>
+          <div class="hero-foot fade-up" style="--delay: 0.6s">
+            <p class="type-body">I am a software engineering student at Miva Open University, now in the second semester of my first year. Alongside my studies I build web and mobile products end to end, from the interface people see to the APIs and databases behind it.</p>
+            <div class="hero-actions">
+              <div class="magnetic"><div class="magnetic-inner"><a class="pill pill-solid" href="projects.html" data-arrow>View projects</a></div></div>
+              <div class="magnetic"><div class="magnetic-inner"><a class="pill pill-outline" href="about.html">About me</a></div></div>
+            </div>
+          </div>
+          <a class="type-label scroll-cue" href="#biography">Scroll <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></a>
+        </div>
+        <figure class="portrait fade-up" style="--delay: 0.45s">
+          <div class="portrait-frame">
+            <img src="images/joshua-omisakin.jpg" alt="Joshua Omisakin smiling with his arms folded" width="900" height="900">
+          </div>
+          <figcaption>
+            <strong>Joshua Omisakin</strong>
+            <span class="status-pill"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>Year One</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-pad gutter" id="biography">
+      <div class="section-head">
+        <p class="type-eyebrow reveal">Biography</p>
+        <h2 class="type-h2 reveal" style="--delay: 0.06s">Studying <span class="text-accent">By Day</span>, Building Since 2022.</h2>
+        <p class="type-body text-soft reveal" style="--delay: 0.12s">I started writing software professionally in 2022 and have since carried products from architecture through to release: frontend and backend engineering, smart contracts and cloud infrastructure. Today I serve as Chief Technology Officer at SafeRoute Africa and as a Senior Software Engineer at HindSight VIP.</p>
+        <p class="type-body text-soft reveal" style="--delay: 0.18s">I chose to study software engineering at Miva to put formal foundations under the work I already do. This site brings both sides together: who I am, what I have built, and the planner I use to keep my semester on track.</p>
+      </div>
+      <ul class="card-row">
+          <li>
+            <div class="reveal" style="--delay: 0.18s">
+              <a class="card feature-card" href="about.html">
+                <div class="card-body card-body-pad">
+                  <div class="card-top">
+                    <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
+                    <svg class="icon card-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </div>
+                  <h3 class="type-h3">About Me</h3>
+                  <p class="card-text">Education, career aspirations, technical skills and what I enjoy away from the keyboard.</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="reveal" style="--delay: 0.24s">
+              <a class="card feature-card" href="projects.html">
+                <div class="card-body card-body-pad">
+                  <div class="card-top">
+                    <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></span>
+                    <svg class="icon card-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </div>
+                  <h3 class="type-h3">Projects</h3>
+                  <p class="card-text">Personal builds in progress, a video walkthrough, and live products from my professional work.</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="reveal" style="--delay: 0.30s">
+              <a class="card feature-card" href="planner.html">
+                <div class="card-body card-body-pad">
+                  <div class="card-top">
+                    <span class="icon-badge"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                    <svg class="icon card-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                  </div>
+                  <h3 class="type-h3">Academic Planner</h3>
+                  <p class="card-text">An interactive planner for adding, completing and deleting study tasks through the semester.</p>
+                </div>
+              </a>
+            </div>
+          </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="tear-into-alt" aria-hidden="true"></div>
+    <div class="footer-inner gutter">
+      <div class="reveal">
+        <p class="type-eyebrow">Get In Touch</p>
+        <h2 class="type-h2">Have Something <span class="text-accent">Worth</span> Building?</h2>
+        <p class="type-body text-softer">Whether it is a project, a study group or a question about my work, I would be glad to hear from you. Every message gets a personal reply.</p>
+        <ul class="socials">
+          <li><a href="https://github.com/thefolahan" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg class="brand" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.99 5.24.99 11.51c0 4.87 3.16 9 7.54 10.46.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.05-3.07.67-3.72-1.3-3.72-1.3-.5-1.28-1.23-1.62-1.23-1.62-1-.69.08-.67.08-.67 1.11.08 1.69 1.14 1.69 1.14.99 1.69 2.6 1.2 3.23.92.1-.72.39-1.2.7-1.48-2.45-.28-5.03-1.23-5.03-5.46 0-1.21.43-2.19 1.14-2.97-.11-.28-.49-1.41.11-2.94 0 0 .93-.3 3.05 1.13a10.6 10.6 0 0 1 5.55 0c2.12-1.43 3.05-1.13 3.05-1.13.6 1.53.22 2.66.11 2.94.71.78 1.14 1.76 1.14 2.97 0 4.24-2.58 5.17-5.04 5.45.4.34.75 1.02.75 2.06 0 1.49-.01 2.69-.01 3.06 0 .29.2.64.76.53a10.53 10.53 0 0 0 7.53-10.46C23.01 5.24 18.27.5 12 .5Z"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/joshua-omisakin" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg class="brand" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg></a></li>
+          <li><a href="mailto:officialjoshua9@gmail.com" aria-label="Email" title="Email"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a></li>
+          <li><a href="https://discord.com/users/1138918467416903780" target="_blank" rel="noreferrer" aria-label="Discord" title="Discord: thefolahan"><svg class="brand" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.369A19.79 19.79 0 0 0 15.432 3a13.9 13.9 0 0 0-.617 1.266 18.35 18.35 0 0 0-5.628 0A13.7 13.7 0 0 0 8.57 3a19.74 19.74 0 0 0-4.886 1.372C.57 9.02-.32 13.555.12 18.025a19.9 19.9 0 0 0 5.993 3.03 14.6 14.6 0 0 0 1.284-2.088 12.9 12.9 0 0 1-2.022-.972c.17-.124.336-.252.496-.384a14.2 14.2 0 0 0 12.258 0c.162.133.328.261.496.384a12.9 12.9 0 0 1-2.026.974 14.4 14.4 0 0 0 1.284 2.088 19.85 19.85 0 0 0 5.996-3.03c.515-5.184-.879-9.678-3.562-13.658ZM8.02 15.278c-1.182 0-2.157-1.085-2.157-2.419 0-1.333.955-2.427 2.157-2.427 1.21 0 2.176 1.094 2.156 2.427 0 1.334-.955 2.419-2.156 2.419Zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.427 2.157-2.427 1.21 0 2.176 1.094 2.156 2.427 0 1.334-.946 2.419-2.156 2.419Z"/></svg></a></li>
+          <li><a href="https://wa.me/2347071377823" target="_blank" rel="noreferrer" aria-label="WhatsApp" title="WhatsApp: +234 707 137 7823"><svg class="brand" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347ZM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.889-9.884a9.82 9.82 0 0 1 6.99 2.898 9.82 9.82 0 0 1 2.892 6.994c-.003 5.45-4.437 9.884-9.887 9.884Zm8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.82 11.82 0 0 0 20.463 3.488Z"/></svg></a></li>
+        </ul>
+      </div>
+      <div class="footer-base">
+        <p class="type-meta">&copy; <span data-year>2026</span> Joshua Omisakin. COS 106 Term Project, Miva Open University.</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
