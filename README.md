@@ -23,7 +23,7 @@ One external stylesheet in `css/style.css`, with a responsive layout built on Fl
 
 ## JavaScript
 
-* `js/main.js`: navigation, mobile menu, button effects, scroll reveals, rotating headline, scroll progress pen and back to top button.
+* `js/main.js`: navigation, mobile menu, button effects, scroll reveals, rotating headline, section by section scrolling, scroll progress pen and back to top button.
 * `js/planner.js`: the task manager, built on an array of task objects and saved to `localStorage`.
 * `js/contact.js`: contact form validation for empty fields, email format and digits only phone numbers.
 

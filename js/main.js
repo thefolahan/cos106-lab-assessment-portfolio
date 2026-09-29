@@ -117,27 +117,6 @@ function setupPills() {
   });
 }
 
-function setupMagnetic() {
-  if (reducedMotion) return;
-
-  document.querySelectorAll(".magnetic").forEach(function (wrapper) {
-    const inner = wrapper.querySelector(".magnetic-inner");
-    if (!inner) return;
-
-    wrapper.addEventListener("pointermove", function (event) {
-      if (event.pointerType !== "mouse") return;
-      const rect = wrapper.getBoundingClientRect();
-      const x = clamp((event.clientX - (rect.left + rect.width / 2)) * 0.35, -8, 8);
-      const y = clamp((event.clientY - (rect.top + rect.height / 2)) * 0.35, -8, 8);
-      inner.style.transform = "translate(" + x + "px, " + y + "px)";
-    });
-
-    wrapper.addEventListener("pointerleave", function () {
-      inner.style.transform = "";
-    });
-  });
-}
-
 function setupReveal() {
   const items = document.querySelectorAll(".reveal");
 
@@ -332,6 +311,107 @@ function setupFooterHeight() {
   if ("ResizeObserver" in window) new ResizeObserver(update).observe(footer);
 }
 
+function setupSectionScroll() {
+  const sections = Array.from(document.querySelectorAll("main > section"));
+  const wide = window.matchMedia("(min-width: 1024px) and (min-height: 560px)");
+  if (sections.length < 2) return;
+
+  const root = document.documentElement;
+  let busy = false;
+  let lastWheel = 0;
+
+  function stops() {
+    const max = root.scrollHeight - window.innerHeight;
+    const points = sections.map(function (section) {
+      return Math.min(section.offsetTop, max);
+    });
+    if (points[points.length - 1] < max - 2) points.push(max);
+    return points;
+  }
+
+  function currentIndex(points) {
+    let closest = 0;
+    points.forEach(function (point, index) {
+      if (Math.abs(point - window.scrollY) < Math.abs(points[closest] - window.scrollY)) closest = index;
+    });
+    return closest;
+  }
+
+  function ease(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  function animateTo(target) {
+    const start = window.scrollY;
+    const distance = target - start;
+    if (Math.abs(distance) < 2) return;
+    const duration = reducedMotion ? 0 : 850;
+    const began = performance.now();
+    busy = true;
+    root.style.scrollBehavior = "auto";
+
+    function frame(now) {
+      const progress = duration ? Math.min((now - began) / duration, 1) : 1;
+      window.scrollTo(0, start + distance * ease(progress));
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        root.style.scrollBehavior = "";
+        setTimeout(function () {
+          busy = false;
+        }, 120);
+      }
+    }
+
+    requestAnimationFrame(frame);
+  }
+
+  function go(direction) {
+    const points = stops();
+    const index = clamp(currentIndex(points) + direction, 0, points.length - 1);
+    animateTo(points[index]);
+  }
+
+  function canScrollInside(element, deltaY) {
+    while (element && element !== document.body) {
+      const style = window.getComputedStyle(element);
+      const scrollable = /(auto|scroll)/.test(style.overflowY) && element.scrollHeight > element.clientHeight + 1;
+      if (scrollable) {
+        if (deltaY > 0 && element.scrollTop + element.clientHeight < element.scrollHeight - 1) return true;
+        if (deltaY < 0 && element.scrollTop > 0) return true;
+      }
+      element = element.parentElement;
+    }
+    return false;
+  }
+
+  window.addEventListener("wheel", function (event) {
+    if (!wide.matches || event.ctrlKey) return;
+    if (canScrollInside(event.target, event.deltaY)) return;
+    event.preventDefault();
+    const now = performance.now();
+    const gap = now - lastWheel;
+    lastWheel = now;
+    if (busy || gap < 160 || Math.abs(event.deltaY) < 2) return;
+    go(event.deltaY > 0 ? 1 : -1);
+  }, { passive: false });
+
+  window.addEventListener("keydown", function (event) {
+    if (!wide.matches || busy) return;
+    const tag = document.activeElement ? document.activeElement.tagName : "";
+    if (/INPUT|TEXTAREA|SELECT|BUTTON/.test(tag) || document.activeElement.isContentEditable) return;
+    const down = ["ArrowDown", "PageDown", " "];
+    const up = ["ArrowUp", "PageUp"];
+    if (down.includes(event.key) && !event.shiftKey) {
+      event.preventDefault();
+      go(1);
+    } else if (up.includes(event.key) || (event.key === " " && event.shiftKey)) {
+      event.preventDefault();
+      go(-1);
+    }
+  });
+}
+
 function setYear() {
   document.querySelectorAll("[data-year]").forEach(function (element) {
     element.textContent = new Date().getFullYear();
@@ -343,10 +423,10 @@ document.addEventListener("DOMContentLoaded", function () {
   setupFooterHeight();
   setupHeader();
   setupMenu();
-  setupMagnetic();
   setupReveal();
   setupHeadline();
   setupPen();
   setupBackToTop();
+  setupSectionScroll();
   setYear();
 });
